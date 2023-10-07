@@ -8,4 +8,29 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K",
 
 
 
+let btnGenerate = document.getElementById("btn_generate_password");
+let passwordOne = document.querySelector("#password_1");
+let passwordTwo = document.querySelector("#password_2");
+let passwordLength = document.getElementById("password_length_number");
+
+
+function generatePasswords(){
+    passwordOne.textContent = makeRandomString(passwordLength.value, generateCharacterSet());
+    passwordTwo.textContent = makeRandomString(passwordLength.value);
+}
+function generateCharacterSet(){
+    let characterSet = ["a","b","c"];
+
+
+
+    return characterSet;
+}
+
+function makeRandomString(length = 15, passwordSymbols = characters){
+    let randomString = "";
+        for(let i=0; i<length; i++){
+            randomString += passwordSymbols[Math.floor(Math.random()*passwordSymbols.length)];
+        }
+    return randomString;
+}
 

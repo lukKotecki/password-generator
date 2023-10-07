@@ -1,3 +1,109 @@
 body {
     margin: 0;
 }
+
+.password_generator{
+    background-color: #ECFDF5;
+    border-radius: 3px;;
+    box-shadow: 0 0 10px #2B283A;
+    margin:100px auto;
+    padding:20px;
+    width:550px;
+    height: 450px;
+}
+
+.text_area {
+    border: solid 0px black;
+    padding: 20px;
+    color: var(--night, #2B283A);
+    font-family: Karla;
+}
+
+.text_area h1 {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 40px; /* 100% */
+    letter-spacing: -2px;
+}
+.higlighted_text{
+    color: #10B981
+}
+
+.middleSection{
+    display: flex;
+    justify-content: space-around;
+}
+
+.oneSide {
+    border:solid 1px red;
+    width: 250px;
+    /* display:flex;
+    flex-direction: column; */
+}
+
+
+
+
+#btn_generate_password {
+    width: 160px;
+    height: 40px;
+    border:none;
+    border-radius: 2px;
+    background-color: #10B981;
+    color: white;
+    margin: 15px;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 24px; /* 150% */
+}
+ #btn_generate_password:hover {
+    background-color: #12976b;
+    transform: scale(1.05);
+    transition: 0.3s;
+    border-radius: 6px;
+ }
+
+
+ #password_length_section{
+    background-color: #10B981;
+    display:flex;
+    padding:0 10px;
+    align-items: center;
+ }
+ #password_length_section p {
+    margin: 0 10px;
+ }
+
+
+.checkbox{
+    margin:5px;
+}
+
+
+
+
+
+
+.passwords {
+    display: flex;
+    justify-content: space-around;
+    margin:20px
+}
+
+.password_field{
+    width:210px;
+    height:40px;
+    margin: 10px;
+    background-color: #273549;
+    border-radius: 6px;
+    color: #5DEF92;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 200% */
+}
