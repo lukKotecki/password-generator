@@ -13,14 +13,51 @@ let passwordOne = document.querySelector("#password_1");
 let passwordTwo = document.querySelector("#password_2");
 let passwordLength = document.getElementById("password_length_number");
 
+let smallLetters = document.getElementById("small-letters");
+let capitalLetters = document.getElementById("capital-letters");
+let numbers = document.getElementById("numbers");
+let specialCharacters = document.getElementById("special-characters");
+
+
 
 function generatePasswords(){
-    passwordOne.textContent = makeRandomString(passwordLength.value, generateCharacterSet());
-    passwordTwo.textContent = makeRandomString(passwordLength.value);
+
+    if(!smallLetters.checked && !capitalLetters.checked && !numbers.checked && !specialCharacters.checked){
+        console.log(smallLetters.checked);
+        console.log(capitalLetters.checked);
+        console.log(numbers.checked);
+        console.log(specialCharacters.checked);
+        passwordOne.textContent = "admin123"
+        passwordTwo.textContent = "mojehaslo1"
+    }else{
+
+        console.log(characters.slice(0,3));
+        passwordOne.textContent = makeRandomString(passwordLength.value, generateCharacterSet());
+        passwordTwo.textContent = makeRandomString(passwordLength.value, generateCharacterSet());
+    }
 }
 function generateCharacterSet(){
-    let characterSet = ["a","b","c"];
+    if(smallLetters.checked && capitalLetters.checked && numbers.checked && specialCharacters.checked){
+        return characters;
+    }
+    let characterSet = [];
 
+    if(capitalLetters.checked){
+        characterSet = characterSet.concat(characters.slice(0,26))
+    }
+    if(smallLetters.checked){
+        characterSet = characterSet.concat(characters.slice(26,52));
+    }
+    if(numbers.checked){
+        characterSet = characterSet.concat(characters.slice(52, 62));
+    }
+    if(specialCharacters.checked){
+        characterSet = characterSet.concat(characters.slice(62, 91));
+    }
+
+
+
+    console.log(characterSet);
 
 
     return characterSet;
@@ -34,3 +71,14 @@ function makeRandomString(length = 15, passwordSymbols = characters){
     return randomString;
 }
 
+
+function copyContent(director){
+    console.log("copyContent "+director);
+
+    if(director ==="pas1"){
+        navigator.clipboard.writeText(passwordOne.textContent);
+    }else if(director ==="pas2"){
+        navigator.clipboard.writeText(passwordTwo.textContent);
+    }
+
+}

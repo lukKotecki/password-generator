@@ -4,7 +4,7 @@ body {
 
 .password_generator{
     background-color: #ECFDF5;
-    border-radius: 3px;;
+    border-radius: 3px;
     box-shadow: 0 0 10px #2B283A;
     margin:100px auto;
     padding:20px;
@@ -58,6 +58,7 @@ body {
     font-style: normal;
     font-weight: bold;
     line-height: 24px; /* 150% */
+    cursor: pointer;
 }
  #btn_generate_password:hover {
     background-color: #12976b;
@@ -90,7 +91,8 @@ body {
 .passwords {
     display: flex;
     justify-content: space-around;
-    margin:20px
+    margin:20px;
+    cursor: pointer;
 }
 
 .password_field{
@@ -106,4 +108,11 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: 32px; /* 200% */
+}
+
+.password_field:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    background-color:#19222e;
+    ;
 }
