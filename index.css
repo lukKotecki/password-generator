@@ -36,7 +36,7 @@ body {
 }
 
 .oneSide {
-    border:solid 1px red;
+    border:solid 0px red;
     width: 250px;
     /* display:flex;
     flex-direction: column; */
@@ -69,7 +69,6 @@ body {
 
 
  #password_length_section{
-    background-color: #10B981;
     display:flex;
     padding:0 10px;
     align-items: center;
